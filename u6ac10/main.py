@@ -2,11 +2,10 @@ import re
 
 # 正規表現 (必要に応じて増やす)
 regex = r''
-regex += r"(^January|^February|^March|^April|^May|^June)|"
-regex += r"(^July|^August|^September|^October|^November|^December)|"
+regex += r"(^January$|^February$|^March$|^April$|^May$|^June$)|"
+regex += r"(^July$|^August$|^September$|^October$|^November$|^December$)|"
 regex += r"(^Sun|^Mon|^Tues|^Wednes|^Thurs|^Fri|^Satur)day|"
 regex += r"(^second|^minute|^hour|^day|^week|^month|^year)|"
-regex += r"(^seconds|^minutes|^hours|^days|^weeks|^months|^years)|"
 regex += r"(^morning|^afternoon|^noon|^night)|"
 regex += r"(^birthday|^Christmas)"
 pattern = re.compile(regex)
