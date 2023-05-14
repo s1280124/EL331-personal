@@ -1,0 +1,18 @@
+ただのメモです
+Team E, L: perfect aspect/tense vs. and non-perfect aspect/tense (e.g. The police have found it vs. The police found it.)
+
+作成者特徴の値を識別、分類、カウント、比較、生成
+
+perfect aspect
+完了型のこと(時制関係なく)
+
+perfect tense
+動作が完了したことを示すときに使われる動詞の時制
+
+分析を行う対象
+
+perfect aspect/sentence total
+non-perfect aspect/sentence total
+を表示しているが、sentence totalには時制が含まれてないと判断された文章も数えている。
+
+I have had the opportunity to study abroad twice during my university years, which has greatly expanded my horizons and allowed me to develop a more global perspective. The project has been in development for over a year, and we are excited to finally share our progress with you.
