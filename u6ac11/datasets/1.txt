@@ -8,3 +8,18 @@ I have studied for two hours.
 He has finished the homework.
 I have been to Japan.
 You had been a teacher.
+
+You should have been a teacher.
+The cat had not eaten.
+The cat hadn't eaten.
+I have not eaten.
+I haven't eaten.
+She has not eaten.
+She hasn't eaten.
+
+I have had a pen.
+She has had a pen.
+I had had a pen.
+
+I was going to have finished my homework.
+I shall have finished my homework.

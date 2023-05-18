@@ -1,0 +1,65 @@
+Store the words necessary for discrimination in reigai.
+Here we use regular expressions.
+
+Initialize the counter variables as zero.
+
+Read a text file.
+
+for each file
+    for each dataset
+         Split dataset by ',''.''?' and store it in sentence.
+
+         for each text in sentence
+            Add 1 to total.
+            Tokenize the text and store this in morph.
+            POS tagging of text　and store this in pos.
+
+            Initialize variable present,past,future as 999.
+            Initialize variable last as -1.
+
+            for i = 0 to length of pos
+                Subsutitute pos[i] for word,tag
+
+                if tag = VBN or word in reigai
+                    last = i
+                endif
+            if last != -1
+                for i = 0 to length of pos
+                    Subsutitute pos[i] for word,tag
+
+                    if word in Have,have,Has,has
+                        present = i
+                    endif
+                    if word in Had,had
+                        past = i
+                    endif
+                    if word in Will,will,Shall,shall
+                        future = i
+                    endif
+                if future < present and present < last
+                    Add 1 to counter variable future_total
+                elif present < last
+                    Add 1 to counter variable present_total
+                elif past < last
+                    Add 1 to counter variable past_total
+                elif past == last
+                    Add 1 to counter variable past_total_alt
+                endif
+            else
+                for i = 0 to length of pos
+                    Subsutitute pos[i] for word,tag
+                    if tag in VB,VBG,VBP,VBZ
+                        if future != 999
+                            Add 1 to counter variable future_total_alt
+                            break
+                        else
+                            Add 1 to counter variable present_total_alt
+                            break
+                    endif
+                    if tag in VBD,VBN
+                        Add 1 to counter variable past_total_alt
+                        break
+                    if word in Will,will,Shall,shall
+                        future = i
+
+Print the generated numbers onto the console.

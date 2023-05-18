@@ -1,7 +1,12 @@
+# s1280160_Yusei Ichikawa_33.333%
+# s1280124_Toshiki Ogata_33.333%
+# s1260247_Shouya Hurukawa_33.333%
+
 import re
 import nltk
 import os
-
+nltk.download('punkt')
+nltk.download('averaged_perceptron_tagger')
 # 例外(必要に応じて追加する)
 reigai = ['found', 'had', 'Had']
 
