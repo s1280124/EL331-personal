@@ -1,10 +1,26 @@
-# EL331-personal
-This Repository is prepared to avoid some trouble (conflict, not needed changes).  
-Team L: https://github.com/Yusei-Ichikawa/EL331
+# Trello team L
 
+## Final Project
+Final project's readme -> [Readme.md](https://github.com/Yusei-Ichikawa/EL331/blob/main/FinalPJ/Readme.md)
+
+## Unit5
+The repository contains code to perform author analysis on 1-gram, 2-gram, and 3-gram datasets.  
+
+The data set is also included in the repository, and I confirmed that it can be run on Google Colaboratory.  
+
+The 2-gram process took a tremendous amount of time to complete, so we stopped running it halfway through.  
+
+The result of our environment is `. /ENG4/output-result(assignment)/` in .png format.
+
+
+Although the analysis was actually performed, the output was not "who the author is" but the accuracy of the analysis.  
+https://github.com/gkhayes/author_attribution  
+
+# 📁 Directory Description
 ## ENG4
 AA for Unit5. Changed some codes for fix Errors cause by running on Google Colaboratory.   
-Original Repository: https://github.com/gkhayes/author_attribution
+Original Repository: https://github.com/gkhayes/author_attribution  
+Mirror: https://github.com/s1280124/EL331-personal/tree/main/ENG4  
 
 ### setup & how to use
 1. `Download this repository and Unzip`

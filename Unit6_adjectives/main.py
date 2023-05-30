@@ -1,6 +1,10 @@
+# s1280160_Yusei Ichikawa_33.333%
+# s1280124_Toshiki Ogata_33.333%
+# s1260247_Shouya Hurukawa_33.333%
+
 import re
 
-# 正規表現 (必要に応じて増やす)
+# regular expression (more if needed)
 regex = r''
 regex += r"(^January$|^February$|^March$|^April$|^May$|^June$)|"
 regex += r"(^July$|^August$|^September$|^October$|^November$|^December$)|"
@@ -10,34 +14,45 @@ regex += r"(^morning|^afternoon|^noon|^night)|"
 regex += r"(^birthday|^Christmas)"
 pattern = re.compile(regex)
 
-# カウンター
+# Counters
 total = 0
 of_time = 0
 of_place = 0
 
-# データセット用 .txt の読み込み
+# Load .txt for dataset
 with open('./dataset.txt', 'r') as f:
     dataset = f.read().split('\n')
 
-# 例文ごとに分割 + カンマとコンマを取り除く
+# Split by example sentence + remove commas and commas
 for sentence in dataset:
     sentence = sentence.replace('.', '').replace(',', '')
 
-    # 単語ごとに分割
+# Split by word
     words = sentence.split(' ')
 
-    # on があれば、それ以降の数単語が正規表現とマッチするか確認する
+# If on, check if the next few words match the regular expression
     for i in range(len(words)):
         if words[i] == 'on':
             total += 1
 
-            finish = min(i+6, len(words)-1) # 可能なら5つ先まで見る
+            finish = min(i+6, len(words)-1) # Look 5 doors down if possible
             for j in range(i+1, finish+1):
                 if bool(pattern.search(words[j])):
                     of_time += 1
                     break
                 if j+1 == finish+1:
                     of_place += 1
-                
-print(f"adverbials of place: {of_place}/{total}")
-print(f"adverbials of time: {of_time}/{total}")
+
+print()
+print(f"Number of \"on\" : {total}")
+print(f"Adverbials of place : {of_place}/{total}")
+print(f"Adverbials of time : {of_time}/{total}")
+
+# Comparison of of_place and of_time
+if of_place > of_time:
+    print("There are more adverbials of place.")
+elif of_place < of_time:
+    print("There are more adverbials of time.")
+else:
+    print("The number of adverbials of place and time is equal.")
+print()

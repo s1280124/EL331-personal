@@ -1,0 +1,26 @@
+Store words related time in regex. Here we use regular expressions.
+Compile regex and Store it in pattern
+
+Initialize the variable total,of_time and of_place as zero.
+
+Read a text file.
+Split this file by '\n' and store it in dataset.
+
+for each sentence of dataset
+    Replace ',' and '.' in sentence with ''.
+    Split sentence by ' ' and store it in words.
+    for i = 0 to length of words
+        if words[i] = 'on' then
+            Add 1 to total.
+            Store the smaller of i plus 6 and the length of words in finish.
+            for j = i + 1 to finish
+                if there is words[j] in pattern then
+                    Add 1 to of_time
+                    break
+                endif
+                if j + 1 = finish + 1
+                    Add 1 to of_place
+                endif
+        endif
+
+Print the generated of_place and of_time onto the console.
